@@ -167,6 +167,7 @@ class Chat:
                   'The model will not see the contexts outside the range.')
         begin_idx = max(0, current_max_len - max_length)
         embs = embs[:, begin_idx:]
+        print(f"conversation.py answer_prepare: {embs}")
 
         generation_kwargs = dict(
             inputs_embeds=embs,

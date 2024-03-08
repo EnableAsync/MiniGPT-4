@@ -86,6 +86,7 @@ class MiniGPTv2(MiniGPTBase):
 
             inputs_llama = self.llama_proj(image_embeds)
             atts_llama = torch.ones(inputs_llama.size()[:-1], dtype=torch.long).to(image.device)
+            # print(f"minigpt_v2.py encode_img: {inputs_llama}")
         return inputs_llama, atts_llama
 
     @classmethod

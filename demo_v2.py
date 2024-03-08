@@ -465,6 +465,7 @@ def gradio_stream_answer(chatbot, chat_state, img_list, temperature):
     if len(img_list) > 0:
         if not isinstance(img_list[0], torch.Tensor):
             chat.encode_img(img_list)
+            # print(f"demo_v2.py encode_img: {img_list}")
     streamer = chat.stream_answer(conv=chat_state,
                                   img_list=img_list,
                                   temperature=temperature,

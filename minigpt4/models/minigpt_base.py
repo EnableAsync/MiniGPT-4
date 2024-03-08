@@ -78,6 +78,7 @@ class MiniGPTBase(BaseModel):
 
         mixed_embs = [emb for pair in zip(seg_embs[:-1], img_list) for emb in pair] + [seg_embs[-1]]
         mixed_embs = torch.cat(mixed_embs, dim=1)
+        print(f"minigpt_base.py get_context_emb: {mixed_embs}")
         return mixed_embs
 
     def prompt_wrap(self, img_embeds, atts_img, prompts, lengths=None):
