@@ -2,4 +2,4 @@ datasets:
   cc_sbu_align:
     data_type: images
     build_info:
-      storage: /path/to/cc_sbu_align/
+      storage: /home/kdzlys/data-disk/sjj/MiniGPT-4/dataset/my/train/used_for_train/
